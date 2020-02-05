@@ -1,1 +1,87 @@
+label {
+	width: 100%;
+	color: blue;
+	font-size: 12px;
+	text-align: center;
+	display: inline-block;
+}
 
+img {
+	width: 100%;
+}
+
+input {
+	width: 70%;
+	border: solid 1px grey;
+	color: black;
+	margin: 10px 0 10px 0;
+	text-indent: 10px;
+	font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+	label {
+		width: 100%;
+		color: blue;
+		font-size: 100%;
+		text-align: center;
+		display: inline-block;
+	}
+	img {
+		width: 60%;
+		margin: auto;
+	}
+	input {
+		width: 70%;
+		border: solid 1px grey;
+		color: black;
+		margin: 10px 0 10px 0;
+		text-indent: 10px;
+		font-size: 100%;
+	}
+}
+
+.col-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.line {
+  height: 2px;
+  background-color: blue;
+}
+
+.user-info {
+	width: 100%;
+	height: 100%;
+	display: inline-table;
+}
+
+.info-label {
+	text-align: left;
+	color: black;
+	width: 30%;
+}
+
+.picture-input {
+	width: 100% !important;
+}
+
+.btn {
+	background-color: #006ab3;
+  border: 2px solid transparent;
+  font-size: 16px;
+  padding: 10px 0;
+  border-radius: 1px;
+  display: block;
+  width: 60%;
+  margin: 8px auto;
+  color: #FFF;
+	z-index: 10;
+	cursor: pointer;
+}
+
+button:disabled {
+	opacity: 0.5;
+}

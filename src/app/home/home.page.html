@@ -1,14 +1,65 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      MON PROFIL
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+	<form [formGroup]="user" *ngIf="this.user" class="form">
+		<ion-grid>
+
+			<ion-card>
+
+				<ion-card-title>
+					<ion-row>
+						<ion-col size="4" class="col-card">
+							<label>Carte d'étudiant</label>
+						</ion-col>
+						<ion-col size="4" class="col-card">
+							<img src="/assets/EpitechLogo.png"/>
+						</ion-col>
+						<ion-col size="4" class="col-card">
+							<label>Valide jusqu'au</label>
+							<label>31 Décembre 2020</label>
+						</ion-col>
+					</ion-row>
+
+					<hr class="line"/>
+				</ion-card-title>
+
+				<ion-card-content>
+
+					<ion-row>
+						<ion-col size="8" class="col-card">
+							<div class="user-info">
+								<label class="info-label">Nom</label>
+								<input formControlName="lastname" />
+								<label class="info-label">Prénom</label>
+								<input formControlName="firstname" />
+								<label class="info-label">Section</label>
+								<input formControlName="section" />
+								<label class="info-label">Né(e) le</label>
+								<input formControlName="birthday_date" />
+							</div>
+						</ion-col>
+						<ion-col size="4" class="col-card">
+							<img *ngIf="user.value.profile_picture" src="{{user.value.profile_picture}}"/>
+							<div *ngIf="!user.value.profile_picture">
+								<input placeholder="url photo de profil" class="picture-input" id="profile-picture"/>
+								<button ion-button clear class="btn" (click)="savePicture()">Enregistrer</button>
+							</div>
+							</ion-col>
+					</ion-row>
+				</ion-card-content>
+			</ion-card>
+
+			<button ion-button clear class="btn" [disabled]="!user.valid" (click)="save()">Enregistrer</button>
+
+		</ion-grid>
+	</form>
+
+
 </ion-content>
