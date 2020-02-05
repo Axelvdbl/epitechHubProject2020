@@ -8,7 +8,8 @@ export class DataService {
 
 	headers: Headers;
 
-	baseURL = 'https://epitech-hub-project-2020-api.herokuapp.com/';
+	//baseURL is not the same as authService
+	baseURL = 'https://epitech-hub-project-2020.herokuapp.com/';
 
   constructor (private http: Http) {
 		this.setHeaders();
@@ -27,8 +28,6 @@ export class DataService {
 		);
 	}
 
-	/* Users */
-
 	getUsers(user_id) {
 		let options = new RequestOptions({ headers: this.headers });
 		return this.http.get(this.baseURL + '/users/' + user_id, options)
@@ -43,8 +42,6 @@ export class DataService {
 		.map(this.extractData)
 		.catch(this.handleError);
 	}
-
-	/* Handle response */
 
   private extractData(res: Response) {
     let headers = res.headers

@@ -12,7 +12,7 @@ import { DataService } from '../../services/data.service';
 })
 export class HomePage {
 
-	private user: FormGroup;
+	//
 
 	config: boolean = false;
 
@@ -32,11 +32,12 @@ export class HomePage {
 	}
 
 	updateForm(data) {
+		//Seems that 'user' is not a variable
 		this.user = this.formBuilder.group({
 			id: [data.id],
 			lastname: [data.lastname, Validators.required],
 			firstname: [data.firstname, Validators.required],
-			section: [data.section, Validators.required],
+			// impossible to change you section ?? Correct that !!
 			birthday_date: [data.birthday_date, Validators.required],
 			profile_picture: [data.profile_picture],
 		});
@@ -84,7 +85,8 @@ export class HomePage {
 		})
 	}
 
-	async displaySuccessMessage() {
+	//this function is not correctly declared !!
+	displaySuccessMessage() {
 		const alert = await this.alertCtrl.create({
 			header: '',
 			message: 'Enregistrement effectué !',

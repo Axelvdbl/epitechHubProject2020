@@ -24,7 +24,6 @@ export class LoginPage implements OnInit {
 								) { }
 
   ngOnInit() {
-		console.log("Inspect Epitech logo and get his ID");
 		this.createForm();
   }
 
@@ -41,6 +40,8 @@ export class LoginPage implements OnInit {
 			var input = document.getElementById('inputLogin');
 			input.className = 'inputsslidein post-title-form';
 		}, 10);
+
+		// the following line is important to understand
 		this.config = value;
 	}
 
@@ -83,7 +84,7 @@ export class LoginPage implements OnInit {
 										resolve(success.body.data.id);
 									},
 									error => {
-										reject(error);
+										//
 									}
 								)
 		});
@@ -94,7 +95,7 @@ export class LoginPage implements OnInit {
 			this.auth.registerUsers(this.log.value)
 								.subscribe(
 									success => {
-										resolve();
+										//
 									},
 									error => {
 										reject(error);

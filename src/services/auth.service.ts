@@ -44,8 +44,6 @@ export class AuthService {
 			.catch(this.handleError);
 	}
 
-	/* Handle response */
-
   private extractData(res: Response) {
     let headers = res.headers
     let body = res.json();

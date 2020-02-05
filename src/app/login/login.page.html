@@ -1,14 +1,17 @@
 <ion-content class="dark-background">
 
 	<div [ngClass]="config == 0 ? 'pre-select' : 'slidein post-select'">
-		<img src="assets/EpitechLogo.png" class="scale-img" id="https://github.com/Axelvdbl/epitechHubProject2020"/>
+		<!-- Epitech logo is not at the good place in the project tree, move it !! -->
+		<img src="assets/EpitechLogo.png" class="scale-img"/>
 	</div>
 
-	<form [formGroup]="log" *ngIf="this.log" class="form">
+	<!-- You have to enter the name of your form -->
+	<form [formGroup]="" *ngIf="this.log" class="form">
 
 		<div *ngIf="config == 1" class="pre-title-form" id="inputLogin">
 			<div class="control-group">
-				<input formControlName="email" type="email" class="input-login" placeholder="Email" />
+				<!-- You have to find the correct formControlName value to continu -->
+				<input formControlName="" type="email" class="input-login" placeholder="Email" />
 			</div>
 
 			<div class="control-group">
@@ -47,7 +50,8 @@
 		<ion-grid>
 			<ion-row class="center">
 				<ion-col size="5">
-					<button class="login-button" (click)="showForm(1)">Sign Up<p class="subtitle">Get Starting</p></button>
+					<!-- You have to find the argument of the showForm function -->
+					<button class="login-button" (click)="showForm()">Sign Up<p class="subtitle">Get Starting</p></button>
 				</ion-col>
 				<ion-col size="2">
 					<hr />
