@@ -24,6 +24,7 @@ export class LoginPage implements OnInit {
 								) { }
 
   ngOnInit() {
+		console.log("Inspect Epitech logo and get his ID");
 		this.createForm();
   }
 
