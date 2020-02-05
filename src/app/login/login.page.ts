@@ -30,9 +30,9 @@ export class LoginPage implements OnInit {
 
 	createForm() {
 		this.log = this.formBuilder.group({
-			email: ['axel.vandenabeele@epitech.eu', Validators.compose([Validators.email, Validators.required])],
-			password: ['password', Validators.compose([Validators.minLength(4), Validators.required])],
-			password_confirmation: ['password', Validators.compose([Validators.minLength(4), Validators.required])],
+			email: ['', Validators.compose([Validators.email, Validators.required])],
+			password: ['', Validators.compose([Validators.minLength(4), Validators.required])],
+			password_confirmation: ['', Validators.compose([Validators.minLength(4), Validators.required])],
 		});
 	}
 
